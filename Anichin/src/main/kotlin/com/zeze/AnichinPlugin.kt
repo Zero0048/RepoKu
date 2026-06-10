@@ -16,7 +16,7 @@ class AnichinPlugin: Plugin() {
         registerMainAPI(Anichin())
 
         openSettings = {
-            val frag = BlankFragment(this)
+            val frag = Anichin(this)
             activity?.let {
                 frag.show(it.supportFragmentManager, "Frag")
             }

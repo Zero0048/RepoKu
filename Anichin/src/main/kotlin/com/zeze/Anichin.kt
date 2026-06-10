@@ -14,8 +14,36 @@ class Anichin : MainAPI() { // All providers must be an instance of MainAPI
     // Enable this when your provider has a main page
     override val hasMainPage = true
 
-    // This function gets called when you search for something
+    override suspend fun getMainPage(
+        page: Int,
+        request: MainPageRequest
+    ): HomePageResponse {
+
+        return newHomePageResponse(
+            listOf(
+                HomePageList("Anime", emptyList())
+            )
+        )
+    }
+
     override suspend fun search(query: String): List<SearchResponse> {
-        return listOf()
+        return emptyList()
+    }
+
+    override suspend fun load(url: String): LoadResponse {
+        return newAnimeLoadResponse(
+            "Anichin",
+            url,
+            TvType.Anime
+        ) {}
+    }
+
+    override suspend fun loadLinks(
+        data: String,
+        isCasting: Boolean,
+        subtitleCallback: (SubtitleFile) -> Unit,
+        callback: (ExtractorLink) -> Unit
+    ): Boolean {
+        return false
     }
 }

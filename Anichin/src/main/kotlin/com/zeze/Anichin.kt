@@ -1,15 +1,15 @@
-package com.example
+package com.zeze
 
 import com.lagradost.cloudstream3.MainAPI
 import com.lagradost.cloudstream3.SearchResponse
 import com.lagradost.cloudstream3.TvType
 
-class ExampleProvider : MainAPI() { // All providers must be an instance of MainAPI
-    override var mainUrl = "https://example.com/" 
-    override var name = "Example provider"
-    override val supportedTypes = setOf(TvType.Movie)
+class Anichin : MainAPI() { // All providers must be an instance of MainAPI
+    override var mainUrl = "https://anichin.cafe/" 
+    override var name = "Anime"
+    override val supportedTypes = setOf(TvType.Anime)
 
-    override var lang = "en"
+    override var lang = "id"
 
     // Enable this when your provider has a main page
     override val hasMainPage = true

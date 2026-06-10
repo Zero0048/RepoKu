@@ -9,8 +9,8 @@ version = 1
 cloudstream {
     // All of these properties are optional, you can safely remove any of them.
 
-    description = "Lorem ipsum"
-    authors = listOf("Cloudburst", "Luna712")
+    description = "Anichin Plugins"
+    authors = listOf("Zero0048")
 
     /**
     * Status int as one of the following:
@@ -21,13 +21,13 @@ cloudstream {
     **/
     status = 1 // Will be 3 if unspecified
 
-    tvTypes = listOf("Movie")
+    tvTypes = listOf("Anime")
 
-    requiresResources = true
-    language = "en"
+    requiresResources = false
+    language = "id"
 
     // Random CC logo I found
-    iconUrl = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Korduene_Logo.png"
+    iconUrl = "https://anichin.cafe/favicon.ico"
 }
 
 android {

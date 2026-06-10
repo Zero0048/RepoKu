@@ -14,12 +14,5 @@ class AnichinPlugin: Plugin() {
 
         // All providers should be added in this manner
         registerMainAPI(Anichin())
-
-        openSettings = {
-            val frag = Anichin(this)
-            activity?.let {
-                frag.show(it.supportFragmentManager, "Frag")
-            }
-        }
     }
 }

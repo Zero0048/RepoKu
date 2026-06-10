@@ -1,0 +1,22 @@
+[
+    {
+        "iconUrl": "https://anichin.cafe/favicon.ico",
+        "fileHash": "sha256-caac837d49e2a95a3a583293ecd10f64ce5334a552ede8a48363e298f6e9d410",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Zero0048/RepoKu",
+        "fileSize": 11810,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Zero0048"
+        ],
+        "tvTypes": [
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "Anichin",
+        "description": "Anichin Plugins",
+        "url": "https://raw.githubusercontent.com/Zero0048/RepoKu/builds/Anichin.cs3",
+        "name": "Anichin"
+    }
+]

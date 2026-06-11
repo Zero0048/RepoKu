@@ -96,23 +96,25 @@ class Anichin : MainAPI() {
             doc.select(".genxed a")
                 .map { it.text() }
 
-        val episodes = doc.select(".eplister li")
-            .map { ep ->
+        val episodes = doc.select(".eplister li").map { ep ->
 
-                val epName =
-                    ep.selectFirst(".epl-title")?.text()
-                        ?: "Episode"
+    val epUrl = fixUrl(
+        ep.selectFirst("a")?.attr("href")
+            ?: return@map null
+    )
 
-                val epUrl =
-                    fixUrl(
-                        ep.selectFirst("a")!!.attr("href")
-                    )
+    val epName = ep.selectFirst(".epl-title")?.text()
 
-                Episode(
-                    epUrl,
-                    epName
-                )
-            }
+    val epNumber = ep.selectFirst(".epl-num")
+        ?.text()
+        ?.trim()
+        ?.toFloatOrNull()
+
+    newEpisode(epUrl) {
+        name = epName
+        episode = epNumber?.toInt()
+    }
+}.filterNotNull()
 
         return newAnimeLoadResponse(
             title,
